@@ -13,4 +13,12 @@ class auth extends Controller
     public function login_action(Request $req){
         dd($req);
     }
+
+    public function signup(){
+        return view('auth.signup');
+    }
+
+    public function signup_action(Request $req){
+        dd($req);
+    }
 }

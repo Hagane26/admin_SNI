@@ -10,6 +10,6 @@ Route::get('/', [dashboard::class,"index"]);
 Route::get('/signin',[auth::class,"login"]);
 Route::post('/signin-action',[auth::class,"login_action"]);
 
-Route::get('/signup',[auth::class,"login"]);
-Route::post('/signup-action',[auth::class,"login_action"]);
+Route::get('/signup',[auth::class,"signup"]);
+Route::post('/signup-action',[auth::class,"signup_action"]);
 
