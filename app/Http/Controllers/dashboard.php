@@ -9,7 +9,7 @@ class dashboard extends Controller
 {
     public function index(){
         if(Auth::user()){
-
+            echo "Welcome to the dashboard, " . Auth::user()->name;
         }else{
             return view('home');
         }
