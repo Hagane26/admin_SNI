@@ -38,7 +38,24 @@ return [
             'report' => false,
         ],
 
+        'turnitin_files' => [
+            'driver' => 'local',
+            'root' => storage_path('app/turnitin_files'),
+            'serve' => true,
+            'throw' => false,
+            'report' => false,
+        ],
+
         'public' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
+        'imgs' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
@@ -74,7 +91,7 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        public_path('imgs') => storage_path('app/imgs'),
     ],
 
 ];

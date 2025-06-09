@@ -4,14 +4,14 @@
 
 @section('context')
     <div class="position-absolute top-50 start-50 translate-middle">
-        <div class="card mb-3" style="width: 800px;">
+        <div class="card mb-3" style="width: 700px;">
             <div class="row m-0">
                 <div class="col-md-4">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
+                    <img src="{{ config('app.url') }}:8000/imgs/logo-1.png" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h3 class="card-title mb-5">Sign In SNIShop</h3>
+                        <h3 class="card-title mb-5">Sign In MinShop</h3>
                         <form action="/signin-action" method="post">
                             @csrf
                             <div class="mb-3 row">

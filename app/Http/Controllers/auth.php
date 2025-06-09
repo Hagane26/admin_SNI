@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class auth extends Controller
 {
@@ -10,7 +11,7 @@ class auth extends Controller
         return view('auth.login');
     }
 
-    public function login_action(Request $req){
+public function login_action(Request $req){
         dd($req);
     }
 

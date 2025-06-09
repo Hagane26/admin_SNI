@@ -25,9 +25,6 @@
                                 <div class="col-sm-7">
                                     <div class="input-group">
                                         <input type="password" class="form-control" id="password" name="password" onchange="fcpass()">
-                                        <div class="input-group-text" onclick="showpass()">
-                                            <i class="bi bi-eye-slash" id="eye"></i>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -36,11 +33,18 @@
                                 <label for="password" class="col-sm-3 col-form-label">Konfirmasi Password</label>
                                 <div class="col-sm-7">
                                     <div class="input-group mt-2">
-                                        <input type="password" class="form-control" id="password" name="cpassword" onchange="fcpass()">
-                                        <div class="input-group-text" onclick="showpass()">
-                                            <i class="bi bi-eye-slash" id="eye"></i>
-                                        </div>
+                                        <input type="password" class="form-control" id="cpassword" name="cpassword" onchange="fcpass()">
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+
+                                </div>
+                                <div class="col-sm-7 mb-3">
+                                    <input class="form-check-input" type="checkbox" id="cp" onclick="showpass()">
+                                    <label for="spw">Show Password</label>
                                 </div>
                             </div>
 
@@ -74,7 +78,6 @@
             var minpass = 8;
 
             if(pass.value != cpass.value){
-
                 pe1.classList.remove('visually-hidden');
             }else{
                 console.log("tidak");
@@ -84,15 +87,15 @@
 
         function showpass(){
             var pass_box = document.getElementById('password');
-            var eye = document.getElementById('eye')
-            if(pass_box.type == "password"){
+            var cpass_box = document.getElementById('cpassword');
+            var ck = document.getElementById('cp');
+
+            if(ck.checked == true){
                 pass_box.type = "text";
-                eye.classList.remove("bi-eye-slash");
-                eye.classList.add("bi-eye");
+                cpass_box.type = "text";
             }else{
                 pass_box.type = "password";
-                eye.classList.remove("bi-eye");
-                eye.classList.add("bi-eye-slash");
+                cpass_box.type = "password";
             }
         }
     </script>
